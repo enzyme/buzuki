@@ -1,0 +1,11 @@
+@mixin viewport-min($_label) {
+    $min: map-get($g-viewports, $_label);
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@function width($_numerator) {
+    @return calc(#{$_numerator - $g-ie-width-correction} * (100% / #{$g-column-count}));
+}

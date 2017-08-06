@@ -1,0 +1,6 @@
+.Content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: $g-content-width + ($g-gutter-size * 2);
+}

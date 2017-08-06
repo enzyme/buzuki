@@ -1,0 +1,63 @@
+$c-cell-alignments: left, center, right, justify;
+$c-cell-offset-sides: right, left;
+$c-cell-text-alignments: left, center, right, justify;
+
+.Cell {
+    position: relative;
+    padding: $g-gutter-size;
+}
+
+.Cell--has-rows {
+    padding: 0 !important;
+
+    > .Row--gutterless {
+        padding: 0;
+    }
+}
+
+@each $_alignment in $c-cell-alignments {
+    .Cell--text-#{$_alignment} {
+        text-align: $_alignment;
+    }
+}
+
+@each $_label, $_ in $g-viewports {
+    @include viewport-min($_label) {
+        .Cell--hidden\@#{$_label} {
+            display: none;
+        }
+
+        .Cell--visible\@#{$_label} {
+            display: block;
+        }
+
+        @for $_i from 1 through $g-column-count {
+            .Cell--#{$_i}\/#{$g-column-count}\@#{$_label} {
+                height: auto;
+                flex-grow: 0;
+                flex-shrink: 0;
+                width: width($_i);
+                max-width: width($_i);
+                flex-basis: width($_i);
+            }
+        }
+
+        @each $_side in $c-cell-offset-sides {
+            @for $_i from 1 through $g-column-count {
+                .Cell--offset-#{$_side}-#{$_i}\/#{$g-column-count}\@#{$_label} {
+                    margin-#{$_side}: width($_i);
+                }
+            }
+        }
+
+        @each $_alignment in $c-cell-text-alignments {
+            .Cell--text-#{$_alignment}\@#{$_label} {
+                text-align: $_alignment;
+            }
+        }
+
+        .Cell--has-rows > .Row--gutterless\@#{$_label} {
+            padding: 0;
+        }
+    }
+}
