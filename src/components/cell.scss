@@ -7,6 +7,14 @@ $c-cell-text-alignments: left, center, right, justify;
     padding: $g-gutter-size;
 }
 
+.Cell--hidden {
+    display: none;
+}
+
+.Cell--visible {
+    display: block;
+}
+
 .Cell--has-rows {
     padding: 0 !important;
 
@@ -15,8 +23,27 @@ $c-cell-text-alignments: left, center, right, justify;
     }
 }
 
+@for $_i from 1 through $g-column-count {
+    .Cell--#{$_i}\/#{$g-column-count} {
+        height: auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: width($_i);
+        max-width: width($_i);
+        flex-basis: width($_i);
+    }
+}
+
+@each $_side in $c-cell-offset-sides {
+    @for $_i from 1 through $g-column-count {
+        .Cell--offset-#{$_side}-#{$_i}\/#{$g-column-count} {
+            margin-#{$_side}: width($_i);
+        }
+    }
+}
+
 @each $_alignment in $c-cell-alignments {
-    .Cell--text-#{$_alignment} {
+    .Cell--align-text-#{$_alignment} {
         text-align: $_alignment;
     }
 }
@@ -51,7 +78,7 @@ $c-cell-text-alignments: left, center, right, justify;
         }
 
         @each $_alignment in $c-cell-text-alignments {
-            .Cell--text-#{$_alignment}\@#{$_label} {
+            .Cell--align-text-#{$_alignment}\@#{$_label} {
                 text-align: $_alignment;
             }
         }

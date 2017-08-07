@@ -1,4 +1,7 @@
-$c-row-directions: row, row-reverse;
+$c-row-directions: (
+    standard: row,
+    reversed: row-reverse
+);
 $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
 
 .Row {
@@ -8,14 +11,14 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
     position: relative;
 }
 
-@each $_direction in $c-row-directions {
-    .Row--direction-#{$_direction} {
+@each $_type, $_direction in $c-row-directions {
+    .Row--flow-#{$_type} {
         flex-direction: $_direction;
     }
 }
 
 @each $_alignment in $c-row-alignments {
-    .Row--align-#{$_alignment} {
+    .Row--valign-#{$_alignment} {
         align-items: $_alignment;
     }
 }
@@ -28,15 +31,15 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
     margin-top: 0;
 }
 
-.Row--finish-flat {
+.Row--finish-short {
     margin-bottom: ($g-gutter-size * 2) * -1;
 }
 
-.Row--finish-fat {
+.Row--finish-tall {
     margin-bottom: 0;
 }
 
-.Row--gutterless {
+.Row--no-gutters {
     padding: $g-gutter-size;
 
     > .Cell {
@@ -54,14 +57,14 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
 
 @each $_label, $_ in $g-viewports {
     @include viewport-min($_label) {
-        @each $_direction in $c-row-directions {
-            .Row--direction-#{$_direction}\@#{$_label} {
+        @each $_type, $_direction in $c-row-directions {
+            .Row--flow-#{$_type}\@#{$_label} {
                 flex-direction: $_direction;
             }
         }
 
         @each $_alignment in $c-row-alignments {
-            .Row--align-#{$_alignment}\@#{$_label} {
+            .Row--valign-#{$_alignment}\@#{$_label} {
                 align-items: $_alignment;
             }
         }
@@ -74,15 +77,15 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
             margin-top: 0;
         }
 
-        .Row--finish-flat\@#{$_label} {
+        .Row--finish-short\@#{$_label} {
             margin-bottom: ($g-gutter-size * 2) * -1;
         }
 
-        .Row--finish-fat\@#{$_label} {
+        .Row--finish-tall\@#{$_label} {
             margin-bottom: 0;
         }
 
-        .Row--gutterless\@#{$_label} {
+        .Row--no-gutters\@#{$_label} {
             padding: $g-gutter-size;
 
             > .Cell {
