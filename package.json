@@ -1,6 +1,6 @@
 {
   "name": "buzuki",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A mobile-first, responsive BEM flavoured flexbox css grid system",
   "repository": {
     "type": "git",
