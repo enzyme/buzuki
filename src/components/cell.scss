@@ -43,7 +43,7 @@ $c-cell-text-alignments: left, center, right, justify;
 }
 
 @each $_alignment in $c-cell-alignments {
-    .Cell--text-align-#{$_alignment} {
+    .Cell--align-#{$_alignment} {
         text-align: $_alignment;
     }
 }
@@ -78,7 +78,7 @@ $c-cell-text-alignments: left, center, right, justify;
         }
 
         @each $_alignment in $c-cell-text-alignments {
-            .Cell--text-align-#{$_alignment}\@#{$_label} {
+            .Cell--align-#{$_alignment}\@#{$_label} {
                 text-align: $_alignment;
             }
         }
