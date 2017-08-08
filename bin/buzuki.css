@@ -549,16 +549,16 @@ body {
 .Cell--offset-left-12\/12 {
   margin-left: calc(11.9999 * (100% / 12)); }
 
-.Cell--text-align-left {
+.Cell--align-left {
   text-align: left; }
 
-.Cell--text-align-center {
+.Cell--align-center {
   text-align: center; }
 
-.Cell--text-align-right {
+.Cell--align-right {
   text-align: right; }
 
-.Cell--text-align-justify {
+.Cell--align-justify {
   text-align: justify; }
 
 @media (min-width: 0px) {
@@ -746,13 +746,13 @@ body {
     margin-left: calc(10.9999 * (100% / 12)); }
   .Cell--offset-left-12\/12\@xs {
     margin-left: calc(11.9999 * (100% / 12)); }
-  .Cell--text-align-left\@xs {
+  .Cell--align-left\@xs {
     text-align: left; }
-  .Cell--text-align-center\@xs {
+  .Cell--align-center\@xs {
     text-align: center; }
-  .Cell--text-align-right\@xs {
+  .Cell--align-right\@xs {
     text-align: right; }
-  .Cell--text-align-justify\@xs {
+  .Cell--align-justify\@xs {
     text-align: justify; }
   .Cell--has-rows > .Row--gutterless\@xs {
     padding: 0; } }
@@ -942,13 +942,13 @@ body {
     margin-left: calc(10.9999 * (100% / 12)); }
   .Cell--offset-left-12\/12\@sm {
     margin-left: calc(11.9999 * (100% / 12)); }
-  .Cell--text-align-left\@sm {
+  .Cell--align-left\@sm {
     text-align: left; }
-  .Cell--text-align-center\@sm {
+  .Cell--align-center\@sm {
     text-align: center; }
-  .Cell--text-align-right\@sm {
+  .Cell--align-right\@sm {
     text-align: right; }
-  .Cell--text-align-justify\@sm {
+  .Cell--align-justify\@sm {
     text-align: justify; }
   .Cell--has-rows > .Row--gutterless\@sm {
     padding: 0; } }
@@ -1138,13 +1138,13 @@ body {
     margin-left: calc(10.9999 * (100% / 12)); }
   .Cell--offset-left-12\/12\@md {
     margin-left: calc(11.9999 * (100% / 12)); }
-  .Cell--text-align-left\@md {
+  .Cell--align-left\@md {
     text-align: left; }
-  .Cell--text-align-center\@md {
+  .Cell--align-center\@md {
     text-align: center; }
-  .Cell--text-align-right\@md {
+  .Cell--align-right\@md {
     text-align: right; }
-  .Cell--text-align-justify\@md {
+  .Cell--align-justify\@md {
     text-align: justify; }
   .Cell--has-rows > .Row--gutterless\@md {
     padding: 0; } }
@@ -1334,13 +1334,13 @@ body {
     margin-left: calc(10.9999 * (100% / 12)); }
   .Cell--offset-left-12\/12\@lg {
     margin-left: calc(11.9999 * (100% / 12)); }
-  .Cell--text-align-left\@lg {
+  .Cell--align-left\@lg {
     text-align: left; }
-  .Cell--text-align-center\@lg {
+  .Cell--align-center\@lg {
     text-align: center; }
-  .Cell--text-align-right\@lg {
+  .Cell--align-right\@lg {
     text-align: right; }
-  .Cell--text-align-justify\@lg {
+  .Cell--align-justify\@lg {
     text-align: justify; }
   .Cell--has-rows > .Row--gutterless\@lg {
     padding: 0; } }
@@ -1530,13 +1530,13 @@ body {
     margin-left: calc(10.9999 * (100% / 12)); }
   .Cell--offset-left-12\/12\@xl {
     margin-left: calc(11.9999 * (100% / 12)); }
-  .Cell--text-align-left\@xl {
+  .Cell--align-left\@xl {
     text-align: left; }
-  .Cell--text-align-center\@xl {
+  .Cell--align-center\@xl {
     text-align: center; }
-  .Cell--text-align-right\@xl {
+  .Cell--align-right\@xl {
     text-align: right; }
-  .Cell--text-align-justify\@xl {
+  .Cell--align-justify\@xl {
     text-align: justify; }
   .Cell--has-rows > .Row--gutterless\@xl {
     padding: 0; } }
