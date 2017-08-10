@@ -23,14 +23,6 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
     }
 }
 
-.Row--intersperse-pop > .Cell + .Cell {
-    margin-top: ($g-gutter-size * 2) * -1;
-}
-
-.Row--intersperse-push > .Cell + .Cell {
-    margin-top: 0;
-}
-
 .Row--finish-short {
     margin-bottom: ($g-gutter-size * 2) * -1;
 }
@@ -67,14 +59,6 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
             .Row--valign-#{$_alignment}\@#{$_label} {
                 align-items: $_alignment;
             }
-        }
-
-        .Row--intersperse-pop\@#{$_label} > .Cell + .Cell {
-            margin-top: ($g-gutter-size * 2) * -1;
-        }
-
-        .Row--intersperse-push\@#{$_label} > .Cell + .Cell {
-            margin-top: 0;
         }
 
         .Row--finish-short\@#{$_label} {
