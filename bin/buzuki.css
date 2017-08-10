@@ -56,12 +56,6 @@ body {
       -ms-flex-align: stretch;
           align-items: stretch; }
 
-.Row--intersperse-pop > .Cell + .Cell {
-  margin-top: -2rem; }
-
-.Row--intersperse-push > .Cell + .Cell {
-  margin-top: 0; }
-
 .Row--finish-short {
   margin-bottom: -2rem; }
 
@@ -109,10 +103,6 @@ body {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-  .Row--intersperse-pop\@xs > .Cell + .Cell {
-    margin-top: -2rem; }
-  .Row--intersperse-push\@xs > .Cell + .Cell {
-    margin-top: 0; }
   .Row--finish-short\@xs {
     margin-bottom: -2rem; }
   .Row--finish-tall\@xs {
@@ -157,10 +147,6 @@ body {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-  .Row--intersperse-pop\@sm > .Cell + .Cell {
-    margin-top: -2rem; }
-  .Row--intersperse-push\@sm > .Cell + .Cell {
-    margin-top: 0; }
   .Row--finish-short\@sm {
     margin-bottom: -2rem; }
   .Row--finish-tall\@sm {
@@ -205,10 +191,6 @@ body {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-  .Row--intersperse-pop\@md > .Cell + .Cell {
-    margin-top: -2rem; }
-  .Row--intersperse-push\@md > .Cell + .Cell {
-    margin-top: 0; }
   .Row--finish-short\@md {
     margin-bottom: -2rem; }
   .Row--finish-tall\@md {
@@ -253,10 +235,6 @@ body {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-  .Row--intersperse-pop\@lg > .Cell + .Cell {
-    margin-top: -2rem; }
-  .Row--intersperse-push\@lg > .Cell + .Cell {
-    margin-top: 0; }
   .Row--finish-short\@lg {
     margin-bottom: -2rem; }
   .Row--finish-tall\@lg {
@@ -301,10 +279,6 @@ body {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-  .Row--intersperse-pop\@xl > .Cell + .Cell {
-    margin-top: -2rem; }
-  .Row--intersperse-push\@xl > .Cell + .Cell {
-    margin-top: 0; }
   .Row--finish-short\@xl {
     margin-bottom: -2rem; }
   .Row--finish-tall\@xl {
