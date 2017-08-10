@@ -2,9 +2,10 @@ $c-row-directions: (
     standard: row,
     reversed: row-reverse
 );
+
 $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
 
-.Row {
+.#{$g-row-name} {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -12,26 +13,26 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
 }
 
 @each $_type, $_direction in $c-row-directions {
-    .Row--flow-#{$_type} {
+    .#{$g-row-name}--flow-#{$_type} {
         flex-direction: $_direction;
     }
 }
 
 @each $_alignment in $c-row-alignments {
-    .Row--valign-#{$_alignment} {
+    .#{$g-row-name}--valign-#{$_alignment} {
         align-items: $_alignment;
     }
 }
 
-.Row--finish-short {
+.#{$g-row-name}--finish-short {
     margin-bottom: ($g-gutter-size * 2) * -1;
 }
 
-.Row--finish-tall {
+.#{$g-row-name}--finish-tall {
     margin-bottom: 0;
 }
 
-.Row--no-gutters {
+.#{$g-row-name}--no-gutters {
     padding: $g-gutter-size;
 
     > .Cell {
@@ -39,7 +40,7 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
     }
 }
 
-.Row--gutters {
+.#{$g-row-name}--gutters {
     padding: 0;
 
     > .Cell {
@@ -50,26 +51,26 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
 @each $_label, $_ in $g-viewports {
     @include viewport-min($_label) {
         @each $_type, $_direction in $c-row-directions {
-            .Row--flow-#{$_type}\@#{$_label} {
+            .#{$g-row-name}--flow-#{$_type}\@#{$_label} {
                 flex-direction: $_direction;
             }
         }
 
         @each $_alignment in $c-row-alignments {
-            .Row--valign-#{$_alignment}\@#{$_label} {
+            .#{$g-row-name}--valign-#{$_alignment}\@#{$_label} {
                 align-items: $_alignment;
             }
         }
 
-        .Row--finish-short\@#{$_label} {
+        .#{$g-row-name}--finish-short\@#{$_label} {
             margin-bottom: ($g-gutter-size * 2) * -1;
         }
 
-        .Row--finish-tall\@#{$_label} {
+        .#{$g-row-name}--finish-tall\@#{$_label} {
             margin-bottom: 0;
         }
 
-        .Row--no-gutters\@#{$_label} {
+        .#{$g-row-name}--no-gutters\@#{$_label} {
             padding: $g-gutter-size;
 
             > .Cell {
@@ -77,7 +78,7 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
             }
         }
 
-        .Row--gutters\@#{$_label} {
+        .#{$g-row-name}--gutters\@#{$_label} {
             padding: 0;
 
             > .Cell {

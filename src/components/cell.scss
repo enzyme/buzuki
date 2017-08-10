@@ -2,20 +2,20 @@ $c-cell-alignments: left, center, right, justify;
 $c-cell-offset-sides: right, left;
 $c-cell-text-alignments: left, center, right, justify;
 
-.Cell {
+.#{$g-cell-name} {
     position: relative;
     padding: $g-gutter-size;
 }
 
-.Cell--hidden {
+.#{$g-cell-name}--hidden {
     display: none;
 }
 
-.Cell--visible {
+.#{$g-cell-name}--visible {
     display: block;
 }
 
-.Cell--has-rows {
+.#{$g-cell-name}--has-rows {
     padding: 0 !important;
 
     > .Row--gutterless {
@@ -24,7 +24,7 @@ $c-cell-text-alignments: left, center, right, justify;
 }
 
 @for $_i from 1 through $g-column-count {
-    .Cell--#{$_i}\/#{$g-column-count} {
+    .#{$g-cell-name}--#{$_i}\/#{$g-column-count} {
         height: auto;
         flex-grow: 0;
         flex-shrink: 0;
@@ -36,30 +36,30 @@ $c-cell-text-alignments: left, center, right, justify;
 
 @each $_side in $c-cell-offset-sides {
     @for $_i from 1 through $g-column-count {
-        .Cell--offset-#{$_side}-#{$_i}\/#{$g-column-count} {
+        .#{$g-cell-name}--offset-#{$_side}-#{$_i}\/#{$g-column-count} {
             margin-#{$_side}: width($_i);
         }
     }
 }
 
 @each $_alignment in $c-cell-alignments {
-    .Cell--align-#{$_alignment} {
+    .#{$g-cell-name}--align-#{$_alignment} {
         text-align: $_alignment;
     }
 }
 
 @each $_label, $_ in $g-viewports {
     @include viewport-min($_label) {
-        .Cell--hidden\@#{$_label} {
+        .#{$g-cell-name}--hidden\@#{$_label} {
             display: none;
         }
 
-        .Cell--visible\@#{$_label} {
+        .#{$g-cell-name}--visible\@#{$_label} {
             display: block;
         }
 
         @for $_i from 1 through $g-column-count {
-            .Cell--#{$_i}\/#{$g-column-count}\@#{$_label} {
+            .#{$g-cell-name}--#{$_i}\/#{$g-column-count}\@#{$_label} {
                 height: auto;
                 flex-grow: 0;
                 flex-shrink: 0;
@@ -71,19 +71,19 @@ $c-cell-text-alignments: left, center, right, justify;
 
         @each $_side in $c-cell-offset-sides {
             @for $_i from 1 through $g-column-count {
-                .Cell--offset-#{$_side}-#{$_i}\/#{$g-column-count}\@#{$_label} {
+                .#{$g-cell-name}--offset-#{$_side}-#{$_i}\/#{$g-column-count}\@#{$_label} {
                     margin-#{$_side}: width($_i);
                 }
             }
         }
 
         @each $_alignment in $c-cell-text-alignments {
-            .Cell--align-#{$_alignment}\@#{$_label} {
+            .#{$g-cell-name}--align-#{$_alignment}\@#{$_label} {
                 text-align: $_alignment;
             }
         }
 
-        .Cell--has-rows > .Row--gutterless\@#{$_label} {
+        .#{$g-cell-name}--has-rows > .Row--gutterless\@#{$_label} {
             padding: 0;
         }
     }
