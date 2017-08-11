@@ -6,7 +6,7 @@
 
     <title>Buzuki – BEM, flexbox, mobile first grid.</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/enzyme/buzuki/0a0bb23eb6cfd03eecba5d3df48fc22d53f66010/bin/buzuki.min.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/enzyme/buzuki/79d2eeaa753e9ccdd33de41c9bcce7ea428a8fb7/bin/buzuki.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Nunito|Sedgwick+Ave+Display">
     <link rel="stylesheet" href="fira_code.css">
     <link rel="stylesheet" href="app.css">
@@ -28,10 +28,10 @@
                 </div>
             </div>
             <div class="Row">
-                <div class="Cell Cell--6/12@xs Cell--6/12@sm Cell--3/12@md">
+                <div class="Cell Cell--6/12@xs Cell--3/12@md">
                     <div class="ExampleCell"></div>
                 </div>
-                <div class="Cell Cell--6/12@xs Cell--6/12@sm Cell--3/12@md">
+                <div class="Cell Cell--6/12@xs Cell--3/12@md">
                     <div class="ExampleCell"></div>
                 </div>
                 <div class="Cell Cell--12/12@xs Cell--6/12@sm Cell--3/12@md">
@@ -90,7 +90,7 @@
                     <div class="ExampleCell"></div>
                 </div>
             </div>
-            <div class="Row Row--finish-short">
+            <div class="Row">
                 <div class="Cell Cell--12/12">
                     <div class="ExampleCell"></div>
                 </div>
@@ -106,7 +106,7 @@
                     <p>Modifiers with tags will only apply when the viewport reaches the size specified.</p>
                 </div>
             </div>
-            <div class="Row Row--finish-short">
+            <div class="Row">
                 <div class="Cell Cell--align-center Cell--12/12@xs Cell--6/12@sm Cell--4/12@md Cell--2/12@lg">
                     <svg width="28" height="80" viewBox="0 0 28 50" xmlns="http://www.w3.org/2000/svg">
                         <g fill="#FAFAFA" fill-rule="evenodd">
@@ -173,22 +173,22 @@
         <article class="Content">
             <div class="Row">
                 <div class="Cell Cell--align-center Cell--12/12">
-                    <h2>The three stooges</h2>
+                    <h2>Blocks</h2>
                     <p><em>Each component may be used independently or in unison, you decide.</em></p>
                 </div>
             </div>
             <div class="Row">
                 <div class="Cell Cell--align-center Cell--12/12@xs Cell--4/12@md">
-                    <h3>Content</h3>
-                    <p>Defines a centred content area with a max width of <mark>1200px</mark> out-of-the-box.</p>
+                    <h3><mark>Content</mark></h3>
+                    <p>Defines a section of page content contained within a <mark>1200px</mark> (max) wide area.</p>
                 </div>
                 <div class="Cell Cell--align-center Cell--12/12@xs Cell--4/12@md">
-                    <h3>Row</h3>
-                    <p>Lays out it's child elements in a horizontal fashion, allowing you to do neat things.</p>
+                    <h3><mark>Row</mark></h3>
+                    <p>Defines a horizontal grouping of cells that can be mangled to meet even the gnarliest of layouts.</p>
                 </div>
                 <div class="Cell Cell--align-center Cell--12/12@xs Cell--4/12@md">
-                    <h3>Cell</h3>
-                    <p>Defines a region of content that abides by the rules, such as width, alignment, etc.</p>
+                    <h3><mark>Cell</mark></h3>
+                    <p>Defines a region of content that abides by the rules governed upon it, keeping your pages sane.</p>
                 </div>
             </div>
         </article>
@@ -196,15 +196,12 @@
     <section class="Container Container--inverted">
         <article class="Content">
             <div class="Row">
-                <div class="Cell Cell--align-center Cell--12/12">
+                <div class="Cell Cell--align-center Cell--12/12@xs Cell--10/12@md Cell--offset-left-1/12@md Cell--8/12@lg Cell--offset-left-2/12@lg">
                     <h2>Modifiers</h2>
-                    <p>Hover over any modifier to see if it supports the use of viewport <span class="u-taggable-always">@tag</span>'s.</p>
-                </div>
-            </div>
-            <div class="Row">
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>.Content</h3>
-                    <p>Used as-is – no elements or modifiers included.</p>
+                    <p>All modifiers (except Cell--<mark class="u-mark-modifier">has-rows</mark>) support viewport @tags.</p>
+                    <p>Like what Row--<mark class="u-mark-modifier">flow-reversed</mark> is doing, but only want it on desktop? Try Row--<mark class="u-mark-modifier">flow-reversed@xl</mark></p>
+                    <p>Does Cell--<mark class="u-mark-modifier">6/12</mark> tickle your fancy, but you want it to be a Cell--<mark class="u-mark-modifier">12/12</mark> on mobile? Throw these two together "Cell--<mark class="u-mark-modifier">12/12@xs</mark> Cell--<mark class="u-mark-modifier">6/12@sm</mark>"</p>
+                    <p>Bada bing, bada boom.</p>
                 </div>
             </div>
             <div class="Row">
@@ -213,47 +210,30 @@
                 </div>
             </div>
             <div class="Row">
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>.Row</h3>
-                    <p>Defaults are equivalent to using <mark class="u-mark-modifier">.Row--flow-standard</mark>, <mark class="u-mark-modifier">.Row--valign-flex-start</mark>, <mark class="u-mark-modifier">.Row--gutters</mark>.</p>
-                </div>
                 <div class="Cell Cell--12/12@xs Cell--6/12@md">
                     <h3>
                         <span class="u-taggable">.Row--<mark class="u-mark-modifier">flow-standard</mark></span><br />
-                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">flow-reverse</mark></span>
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">flow-reversed</mark></span>
                     </h3>
-                    <p><mark class="u-mark-modifier">flow-standard</mark> will lay child elements out from left to right, in DOM order. <mark class="u-mark-modifier">flow-reverse</mark> will lay child elements out from right to left, in reverse DOM order.</p>
+                    <p>If you want cells to appear in natural DOM order, <mark class="u-mark-modifier">flow-standard</mark> will do just that. It's what a row does by default. If you need cells to appear right to left (in opposite DOM order), try <mark class="u-mark-modifier">flow-reversed</mark>.</p>
                 </div>
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>
-                        <span class="u-taggable">.Row--valign-<mark class="u-mark-modifier">baseline</mark></span><br />
-                        <span class="u-taggable">.Row--valign-<mark class="u-mark-modifier">center</mark></span><br />
-                        <span class="u-taggable">.Row--valign-<mark class="u-mark-modifier">flex-end</mark></span><br />
-                        <span class="u-taggable">.Row--valign-<mark class="u-mark-modifier">flex-start</mark></span><br />
-                        <span class="u-taggable">.Row--valign-<mark class="u-mark-modifier">stretch</mark></span>
-                    </h3>
-                    <p>Vertically aligns child elements based on the flexbox property "align-items" (<mark class="u-mark-modifier">baseline</mark>, <mark class="u-mark-modifier">center</mark>, <mark class="u-mark-modifier">flex-end</mark>, <mark class="u-mark-modifier">flex-start</mark>, <mark class="u-mark-modifier">stretch</mark>).</p>
-                </div>
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>
-                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">intersperse-pop</mark></span><br />
-                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">intersperse-push</span></mark>
-                    </h3>
-                    <p><mark class="u-mark-modifier">intersperse-pop</mark> will remove the gutters in-between cells. <mark class="u-mark-modifier">intersperse-push</mark> will restore/add gutters in-between cells.</p>
-                </div>
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>
-                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">finish-short</mark></span><br />
-                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">finish-tall</span></mark>
-                    </h3>
-                    <p><mark class="u-mark-modifier">finish-short</mark> will remove any space left at the bottom of the row from any gutters. <mark class="u-mark-modifier">finish-tall</mark> will restore/add the space left at the bottom of a row by any gutters.</p>
-                </div>
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>
-                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">no-gutters</mark></span><br />
-                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">gutters</span></mark>
-                    </h3>
-                    <p><mark class="u-mark-modifier">no-gutters</mark> will remove all internal gutters. <mark class="u-mark-modifier">gutters</mark> will restore/add all internal gutters.</p>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>flow-standard</small></div>
+                    </div>
+                    <div class="Row Row--flow-standard">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 3</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>flow-reversed</small></div>
+                    </div>
+                    <div class="Row Row--flow-reversed">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 3</div></div>
+                    </div>
                 </div>
             </div>
             <div class="Row">
@@ -263,43 +243,287 @@
             </div>
             <div class="Row">
                 <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>.Cell</h3>
-                    <p>Defines a horizontal grouping of child elements from left to right.</p>
+                    <h3>
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">finish-short</mark></span><br />
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">finish-tall</mark></span>
+                    </h3>
+                    <p>Cells have gutters around all edges, which means you'll have a horizontal gutter underneath rows by default. Using <mark class="u-mark-modifier">finish-short</mark> makes sure that the content under a row will start directly after it. Using <mark class="u-mark-modifier">finish-tall</mark> means content under a row will be preceded by a gutter.</p>
                 </div>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>finish-short</small></div>
+                    </div>
+                    <div class="Row Row--finish-short">
+                        <div class="Cell Cell--12/12"><div class="ExampleCell ExampleCell--inverted">Row 1</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><div class="ExampleCell ExampleCell--inverted">Row 2</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>finish-tall</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><div class="ExampleCell ExampleCell--inverted">Row 1</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><div class="ExampleCell ExampleCell--inverted">Row 2</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--align-center Cell--12/12">
+                    <hr>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--12/12@xs Cell--6/12@md">
+                    <h3>
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">no-gutters</mark></span><br />
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">gutters</mark></span>
+                    </h3>
+                    <p>Cells have gutters around all edges, which means there will be horizontal and vertical gaps between all cells present in a row by default. Specifying <mark class="u-mark-modifier">no-gutters</mark> will remove these gutters and all cells will directly touch each other, like a pack of sardines. Using <mark class="u-mark-modifier">gutters</mark> means cells will have breathing room.</p>
+                </div>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>no-gutters</small></div>
+                    </div>
+                    <div class="Row Row--no-gutters">
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 2</div></div>
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 3</div></div>
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 4</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>gutters</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 2</div></div>
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 3</div></div>
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell 4</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--align-center Cell--12/12">
+                    <hr>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--12/12@xs Cell--6/12@md">
+                    <h3>
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">valign-baseline</mark></span><br />
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">valign-center</mark></span><br />
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">valign-flex-end</mark></span><br />
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">valign-flex-start</mark></span><br />
+                        <span class="u-taggable">.Row--<mark class="u-mark-modifier">valign-stretch</mark></span>
+                    </h3>
+                    <p>Using these alignment modifiers, you can vertically organise all cells present in a row. As rows use flexbox as the underlying display property, these modifiers follow the same rules as set out by the css spec "align-items" property.</p>
+                </div>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>baseline</small></div>
+                    </div>
+                    <div class="Row Row--valign-baseline">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--padded-1">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--padded-2">Cell 3</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>center</small></div>
+                    </div>
+                    <div class="Row Row--valign-center">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-1">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-2">Cell 3</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>flex-end</small></div>
+                    </div>
+                    <div class="Row Row--valign-flex-end">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-1">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-2">Cell 3</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>flex-start</small></div>
+                    </div>
+                    <div class="Row Row--valign-flex-start">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-1">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-2">Cell 3</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>stretch</small></div>
+                    </div>
+                    <div class="Row Row--valign-stretch">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-fill">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-fill">Cell 2 with a little more information inside of it.</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted ExampleCell--height-fill">Cell 3</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--align-center Cell--12/12">
+                    <hr>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--12/12@xs Cell--6/12@md">
+                    <h3>
+                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">#/#</mark></span>
+                    </h3>
+                    <p>Here, <mark class="u-mark-modifier">#/#</mark> denotes any whole-number fraction of the columns availabe, which is 12 by default. This makes thing simple and readable. Need a cell that's 6 columns wide? Use Cell--<mark class="u-mark-modifier">6/12</mark>. Need 3 columns worth? Cell--<mark class="u-mark-modifier">3/12</mark>, etc.</p>
+                </div>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>example 1</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell--4/12</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell--4/12</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell--4/12</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>example 2</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell--6/12</div></div>
+                        <div class="Cell Cell--6/12"><div class="ExampleCell ExampleCell--inverted">Cell--6/12</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>example 3</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell--4/12</div></div>
+                        <div class="Cell Cell--5/12"><div class="ExampleCell ExampleCell--inverted">Cell--5/12</div></div>
+                        <div class="Cell Cell--3/12"><div class="ExampleCell ExampleCell--inverted">Cell--3/12</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--align-center Cell--12/12">
+                    <hr>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--12/12@xs Cell--6/12@md">
+                    <h3>
+                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">offset-left-#/#</mark></span><br />
+                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">offset-right-#/#</mark></span>
+                    </h3>
+                    <p>Cell offsets follow the same sizing property as Cell--<mark class="u-mark-modifier">#/#</mark>. So if you want a cell to have a left offset of 2 columns, chuck on Cell--<mark class="u-mark-modifier">offset-left-2/12</mark>. Need a right offset of 8 columns worth? Cell--<mark class="u-mark-modifier">offset-right-8/12</mark>, simple.</p>
+                </div>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>offset-left</small></div>
+                    </div>
+                    <div class="Row u-row-outline">
+                        <div class="Cell Cell--6/12 Cell--offset-left-6/12"><div class="ExampleCell ExampleCell--inverted">Cell--6/12 + <br />Cell--offset-left-6/12</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>offset-right (with .Row--<mark class="u-mark-modifier">flow-reversed</mark>)</small></div>
+                    </div>
+                    <div class="Row Row--flow-reversed u-row-outline">
+                        <div class="Cell Cell--6/12 Cell--offset-right-3/12"><div class="ExampleCell ExampleCell--inverted">Cell--6/12 + <br />Cell--offset-right-3/12</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--align-center Cell--12/12">
+                    <hr>
+                </div>
+            </div>
+            <div class="Row">
                 <div class="Cell Cell--12/12@xs Cell--6/12@md">
                     <h3>
                         <span class="u-taggable">.Cell--<mark class="u-mark-modifier">hidden</mark></span><br />
                         <span class="u-taggable">.Cell--<mark class="u-mark-modifier">visible</mark></span>
                     </h3>
-                    <p><mark class="u-mark-modifier">hidden</mark> will hide the cell (display: none). <mark class="u-mark-modifier">visible</mark> will show the cell (display: block).</p>
+                    <p>These are fairly self explanatory, so we'll move on.</p>
                 </div>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>hidden (use your imagination...)</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--hidden Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--hidden Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 2</div></div>
+                        <div class="Cell Cell--hidden Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 3</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>visible</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 3</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--align-center Cell--12/12">
+                    <hr>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--12/12@xs Cell--6/12@md">
+                    <h3>
+                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">align-left</mark></span><br />
+                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">align-center</mark></span><br />
+                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">align-right</mark></span><br />
+                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">align-justify</mark></span><br />
+                    </h3>
+                    <p>These alignment modifiers follow the same rules as specified by the css "text-align" property. Simply put, these modifiers are here as a convenience to you, saving you from having to write an additional class to align your text if that's all you're looking for.</p>
+                </div>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>align-left</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--align-left Cell--12/12"><div class="ExampleCell ExampleCell--no-alignment ExampleCell--inverted">Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Ultricies Dolor Cras Egestas.</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>align-center</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--align-center Cell--12/12"><div class="ExampleCell ExampleCell--no-alignment ExampleCell--inverted">Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Ultricies Dolor Cras Egestas.</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>align-right</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--align-right Cell--12/12"><div class="ExampleCell ExampleCell--no-alignment ExampleCell--inverted">Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Ultricies Dolor Cras Egestas.</div></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>align-justify</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--align-justify Cell--12/12"><div class="ExampleCell ExampleCell--no-alignment ExampleCell--inverted">Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Ultricies Dolor Cras Egestas.</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Row">
+                <div class="Cell Cell--align-center Cell--12/12">
+                    <hr>
+                </div>
+            </div>
+            <div class="Row">
                 <div class="Cell Cell--12/12@xs Cell--6/12@md">
                     <h3>
                         .Cell--<mark class="u-mark-modifier">has-rows</mark>
                     </h3>
-                    <p><mark class="u-mark-modifier">has-rows</mark> simply lets the cell know that you've embedded rows within it. This helps keeps things laid out how you'd expect it to look.</p>
+                    <p>I've left this one till last. For more advanced layouts, like those wrangled up by your designers 😜. If a cell has rows embedded within it (as used throughout the examples) this modifier will ensure the gutters are taken care of. Interested? Inspect the source.</p>
                 </div>
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>
-                        <span class="u-taggable">.Cell--<mark class="u-mark-modifier">#/#</mark></span>
-                    </h3>
-                    <p><mark class="u-mark-modifier">#/#</mark> denotes any column size. If you're using 12 columns (set out-of-the-box), and you want a 12 column wide cell, you'd specify <mark class="u-mark-modifier">Cell--12/12</mark>. Need 6 a column wide cell? <mark class="u-mark-modifier">Cell--6/12</mark>. 2 column wide cell? <mark class="u-mark-modifier">Cell--2/12</mark>. You get the idea.</p>
-                </div>
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>
-                        <span class="u-taggable">.Cell--offset-right-<mark class="u-mark-modifier">#/#</mark></span><br />
-                        <span class="u-taggable">.Cell--offset-left-<mark class="u-mark-modifier">#/#</mark></span>
-                    </h3>
-                    <p><mark class="u-mark-modifier">#/#</mark> denotes any column size. If you're using 12 columns (set out-of-the-box), and you want a 8 column wide offset, you'd specify <mark class="u-mark-modifier">Cell--8/12</mark>. Need 6 a column wide offset? <mark class="u-mark-modifier">Cell--6/12</mark>. 2 column wide offset? <mark class="u-mark-modifier">Cell--2/12</mark>. You get the idea.</p>
-                </div>
-                <div class="Cell Cell--12/12@xs Cell--6/12@md">
-                    <h3>
-                        <span class="u-taggable">.Cell--align-<mark class="u-mark-modifier">left</mark></span><br />
-                        <span class="u-taggable">.Cell--align-<mark class="u-mark-modifier">center</mark></span><br />
-                        <span class="u-taggable">.Cell--align-<mark class="u-mark-modifier">right</mark></span><br />
-                        <span class="u-taggable">.Cell--align-<mark class="u-mark-modifier">justify</mark></span><br />
-                    </h3>
-                    <p>Horizontally aligns child elements based on the css property "text-align" (<mark class="u-mark-modifier">left</mark>, <mark class="u-mark-modifier">center</mark>, <mark class="u-mark-modifier">right</mark>, <mark class="u-mark-modifier">justify</mark>).</p>
+                <div class="Cell Cell--has-rows Cell--12/12@xs Cell--6/12@md">
+                    <div class="Row">
+                        <div class="Cell Cell--12/12"><small>has-rows</small></div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 1</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 2</div></div>
+                        <div class="Cell Cell--4/12"><div class="ExampleCell ExampleCell--inverted">Cell 3</div></div>
+                    </div>
                 </div>
             </div>
         </article>
@@ -310,7 +534,7 @@
                 <div class="Cell Cell--align-center Cell--12/12">
                     <h2>Customisation</h2>
                     <p>Anything you see <mark>marked in yellow</mark> on this page can be modified.</p>
-                    <p>When importing Buzuki via Sass, you may <a href="https://github.com/enzyme/buzuki/blob/master/src/_settings.scss">override any of the settings</a> depending on your project needs.</p>
+                    <p>When importing Buzuki via Sass, you may <a href="https://github.com/enzyme/buzuki/blob/master/src/_settings.scss">override any of the settings</a>.</p>
                     <p>More or less columns? Different breakpoints? Different content width? No problem.</p>
                 </div>
             </div>

@@ -92,24 +92,21 @@ hr {
     border-top: 2px solid #424242;
 }
 
-span.u-taggable:hover {
-    cursor: help;
-}
-
-span.u-taggable-always,
-span.u-taggable:hover:after {
-    color: #616161;
-    display: inline-block;
-    content: "@tag";
-
-    -webkit-animation: rainbow-text 5s ease infinite;
-         -z-animation: rainbow-text 5s ease infinite;
-         -o-animation: rainbow-text 5s ease infinite;
-            animation: rainbow-text 5s ease infinite;
-}
-
 a {
     color: #212121;
+}
+
+pre {
+    padding: 1rem;
+    overflow-x: scroll;
+    background-color: #263238;
+}
+
+code {
+    display: block;
+    color: #ECEFF1;
+    font-family: "Fira Code";
+    font-feature-settings: "calt" 1;
 }
 
 .Container {
@@ -148,6 +145,18 @@ a {
     background: #212121;
 }
 
+.ExampleCell--inverted {
+    width: 100%;
+    display: flex;
+    color: #212121;
+    height: auto;
+    min-height: 3rem;
+    padding: 0.85rem;
+    background: #FAFAFA;
+    align-items: center;
+    justify-content: center;
+}
+
 .ExampleCell:hover {
     background: linear-gradient(
         124deg,
@@ -166,17 +175,36 @@ a {
             animation: rainbow 10s ease infinite;
 }
 
-pre {
-    padding: 1rem;
-    overflow-x: scroll;
-    background-color: #263238;
+.ExampleCell--inverted:hover {
+    color: #FAFAFA;
 }
 
-code {
+.ExampleCell--padded-1 {
+    padding-top: 0.5rem;
+}
+
+.ExampleCell--padded-2 {
+    padding-top: 1rem;
+}
+
+.ExampleCell--height-1 {
+    min-height: 4rem;
+}
+
+.ExampleCell--height-2 {
+    min-height: 5rem;
+}
+
+.ExampleCell--height-fill {
+    min-height: 100%;
+}
+
+.ExampleCell--no-alignment {
     display: block;
-    color: #ECEFF1;
-    font-family: "Fira Code";
-    font-feature-settings: "calt" 1;
+}
+
+.u-row-outline {
+    border: 1px solid gray;
 }
 
 @-webkit-keyframes rainbow {
