@@ -5,12 +5,15 @@
 
 ## Installation
 CDN (Version 0.8.0)
+
 `https://cdn.rawgit.com/enzyme/buzuki/79d2eeaa753e9ccdd33de41c9bcce7ea428a8fb7/bin/buzuki.min.css`
 
 Yarn
+
 `yarn add buzuki`
 
 NPM
+
 `npm install buzuki`
 
 ## License
