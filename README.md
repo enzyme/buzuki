@@ -4,9 +4,9 @@
 <p align="center">Official docs: <a href="https://buzuki.pixls.com.au/">buzuki.pixls.com.au</a></p>
 
 ## Installation
-CDN (Version 0.8.0)
+CDN (Version 1.0.0)
 
-`https://cdn.rawgit.com/enzyme/buzuki/79d2eeaa753e9ccdd33de41c9bcce7ea428a8fb7/bin/buzuki.min.css`
+`https://cdn.rawgit.com/enzyme/buzuki/c2c4dadcc78183f7de91a35e96f4bee5b08a96d3/bin/buzuki.min.css`
 
 Yarn
 
