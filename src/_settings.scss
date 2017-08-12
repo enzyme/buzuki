@@ -1,6 +1,6 @@
-$g-row-name: 'Row';
-$g-cell-name: 'Cell';
-$g-content-name: 'Content';
+$g-row-name: 'Row' !default;
+$g-cell-name: 'Cell' !default;
+$g-content-name: 'Content' !default;
 
 $g-column-count: 12 !default;
 $g-gutter-size: 1rem !default;
