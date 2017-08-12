@@ -1,0 +1,47 @@
+body {
+    @if ($g-debug) {
+        &::after {
+            right: 0;
+            bottom: 0;
+            content: "";
+            width: auto;
+            padding: 1rem;
+            color: #FAFAFA;
+            position: fixed;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            align-items: center;
+            display: inline-flex;
+            font-family: 'Verdana';
+            text-transform: uppercase;
+            background-color: #212121;
+            border-top-left-radius: 5px;
+        }
+
+        @each $_label, $_ in $g-viewports {
+            @include viewport-min($_label) {
+                &::after {
+                    content: "📐 Viewport #{$_label}";
+                }
+            }
+        }
+    }
+}
+
+.#{$g-content-name} {
+    @if ($g-debug) {
+        box-shadow: 0 0 0 6px purple;
+    }
+}
+
+.#{$g-row-name} {
+    @if ($g-debug) {
+        box-shadow: 0 0 0 3px red;
+    }
+}
+
+.#{$g-cell-name} {
+    @if ($g-debug) {
+        box-shadow: inset 0 0 0 3px black;
+    }
+}
