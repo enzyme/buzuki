@@ -139,6 +139,10 @@ code {
     color: #FAFAFA;
 }
 
+.Container--keyline {
+    border-top: 1px dotted gray;
+}
+
 .ExampleCell {
     width: 100%;
     height: 3rem;
