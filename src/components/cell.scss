@@ -1,8 +1,13 @@
 $c-cell-alignments: left, center, right, justify;
 $c-cell-offset-sides: right, left;
-$c-cell-text-alignments: left, center, right, justify;
 
 .#{$g-cell-name} {
+    width: 100%;
+    height: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    flex-basis: 100%;
     position: relative;
     padding: $g-gutter-size;
 }
@@ -25,9 +30,6 @@ $c-cell-text-alignments: left, center, right, justify;
 
 @for $_i from 1 through $g-column-count {
     .#{$g-cell-name}--#{$_i}\/#{$g-column-count} {
-        height: auto;
-        flex-grow: 0;
-        flex-shrink: 0;
         width: width($_i);
         max-width: width($_i);
         flex-basis: width($_i);
@@ -60,9 +62,6 @@ $c-cell-text-alignments: left, center, right, justify;
 
         @for $_i from 1 through $g-column-count {
             .#{$g-cell-name}--#{$_i}\/#{$g-column-count}\@#{$_label} {
-                height: auto;
-                flex-grow: 0;
-                flex-shrink: 0;
                 width: width($_i);
                 max-width: width($_i);
                 flex-basis: width($_i);
@@ -77,7 +76,7 @@ $c-cell-text-alignments: left, center, right, justify;
             }
         }
 
-        @each $_alignment in $c-cell-text-alignments {
+        @each $_alignment in $c-cell-alignments {
             .#{$g-cell-name}--align-#{$_alignment}\@#{$_label} {
                 text-align: $_alignment;
             }
