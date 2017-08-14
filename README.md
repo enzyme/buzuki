@@ -3,6 +3,11 @@
 <p align="center">A mobile-first, responsive BEM flavoured flexbox css grid system.</p>
 <p align="center">Official docs: <a href="https://buzuki.pixls.com.au/">buzuki.pixls.com.au</a></p>
 
+## Browser support
+![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/blob/master/src/edge/edge_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | 10+ ✔ | Latest ✔ | 9.1+ ✔ |
+
 ## Installation
 CDN (Version 1.0.0)
 
