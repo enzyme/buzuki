@@ -25,11 +25,19 @@ $c-row-alignments: baseline, center, flex-end, flex-start, stretch;
 }
 
 .#{$g-row-name}--finish-short {
-    margin-bottom: ($g-gutter-size * 2) * -1;
+    margin-bottom: $g-gutter-size * -1;
+}
+
+.#{$g-row-name}--finish-short + .#{$g-row-name} {
+    margin-top: $g-gutter-size * -2;
 }
 
 .#{$g-row-name}--finish-tall {
     margin-bottom: 0;
+}
+
+.#{$g-row-name}--finish-tall + .#{$g-row-name} {
+    margin-top: 0;
 }
 
 .#{$g-row-name}--no-gutters {
