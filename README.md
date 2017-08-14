@@ -9,9 +9,9 @@
 Latest ✔ | Latest ✔ | Latest ✔ | 10+ ✔ | 9.1+ ✔ |
 
 ## Installation
-CDN (Version 1.0.0)
+CDN (Version 1.0.1)
 
-`https://cdn.rawgit.com/enzyme/buzuki/c2c4dadcc78183f7de91a35e96f4bee5b08a96d3/bin/buzuki.min.css`
+`https://cdn.rawgit.com/enzyme/buzuki/b157ed9d09fb14cca481d3623fa2ad96dbea78e5/bin/buzuki.min.css`
 
 Yarn
 
