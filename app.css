@@ -140,7 +140,23 @@ code {
 }
 
 .Container--keyline {
-    border-top: 1px dotted gray;
+    position: relative;
+    border-top: 1px dashed gray;
+}
+
+.Container--keyline::before {
+    left: 50%;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    top: -1.05rem;
+    position: absolute;
+    margin-left: -1rem;
+    background-size: 100%;
+    transform: rotateZ(90deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/scissors.svg');
 }
 
 .ExampleCell {
@@ -209,6 +225,17 @@ code {
 
 .u-row-outline {
     border: 1px solid gray;
+}
+
+.DownloadLink {
+    min-height: 3rem;
+    align-items: center;
+    display: inline-flex;
+}
+
+.DownloadLink img {
+    max-height: 2rem;
+    margin-right: 1rem;
 }
 
 @-webkit-keyframes rainbow {
