@@ -57,10 +57,16 @@ body {
           align-items: stretch; }
 
 .Row--finish-short {
-  margin-bottom: -2rem; }
+  margin-bottom: -1rem; }
+
+.Row--finish-short + .Row {
+  margin-top: -2rem; }
 
 .Row--finish-tall {
   margin-bottom: 0; }
+
+.Row--finish-tall + .Row {
+  margin-top: 0; }
 
 .Row--no-gutters {
   padding: 1rem; }
